@@ -10,7 +10,7 @@ add_test(
 )
 set_tests_properties (${prefix}_can_Run PROPERTIES
     LABELS "${MODULE}")
-	
+
 add_test(
     NAME ${prefix}_can_Print_Help_Without_Arguments
     COMMAND ${APPLICATION}
@@ -36,11 +36,11 @@ set_tests_properties (${prefix}_can_Detect_Wrong_Number_Format PROPERTIES
     LABELS "${MODULE}")
 
 add_test(
-    NAME ${prefix}_can_Detect_Negative_Length 
+    NAME ${prefix}_can_Detect_Negative_Length
     COMMAND ${APPLICATION} -1 Meter Centimeter
 )
 set_tests_properties (${prefix}_can_Detect_Negative_Length PROPERTIES
-    PASS_REGULAR_EXPRESSION "Error! Invalid argument"
+    PASS_REGULAR_EXPRESSION "Error! Invalid argument!"
     LABELS "${MODULE}")
 
 add_test(
@@ -65,4 +65,4 @@ add_test(
 )
 set_tests_properties (${prefix}_can_Convert_Lengths PROPERTIES
     PASS_REGULAR_EXPRESSION "25 meters is 2500 centimeters"
-LABELS "${MODULE}")
+    LABELS "${MODULE}")
